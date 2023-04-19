@@ -179,7 +179,7 @@ def initialize_hji_doubleintegrator(dataset, minWith, CBVF=False):
         batch_size = x.shape[1]
 
         du, status = diff_operators.jacobian(y, x)
-        dudt = -du[..., 0, 0]
+        dudt = du[..., 0, 0]
         dudx = du[..., 0, 1:]
 
         # Double integrator dynamics
@@ -189,7 +189,7 @@ def initialize_hji_doubleintegrator(dataset, minWith, CBVF=False):
         # Compute the hamiltonian for the ego vehicle
         #   H(x,t) = max_u min_d < Dx * V(x,t), f(x,u,d) >
         #          = P1*x2 + acc_max * abs(P2)
-        ham = dudx[..., 0] * x[..., 1] - acc_max * torch.abs(dudx[..., 1])
+        ham = dudx[..., 0] * x[..., 1] - acc_max * torch.abs(dudx[..., 2])
 
         # If we are computing BRT then take min with zero
         if minWith == 'zero':

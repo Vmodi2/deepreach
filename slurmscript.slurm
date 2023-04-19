@@ -15,6 +15,7 @@ module purge
 module load anaconda3/2022.5
 conda activate testenv
 
-CUDA_VISIBLE_DEVICES=0 python experiment_scripts/train_hji_doubleInt.py --experiment_name experiment_doubleInt --minWith target --num_src_samples 10000 --pretrain --pretrain_iters 10000 --num_epochs 120000 --counter_end 110000
+# CUDA_VISIBLE_DEVICES=0 python validation_scripts/air3D_valfunc_and_BRT.py 
+CUDA_VISIBLE_DEVICES=0 python experiment_scripts/train_hji_doubleInt.py --experiment_name experiment_doubleInt_2 --minWith target --num_src_samples 10000 --pretrain --pretrain_iters 10000 --num_epochs 120000 --counter_end 110000
 # CUDA_VISIBLE_DEVICES=0 python experiment_scripts/train_hji_particle2D.py --experiment_name experiment_2dParticle --minWith target --num_src_samples 10000 --pretrain --pretrain_iters 10000 --num_epochs 120000 --counter_end 110000
 # CUDA_VISIBLE_DEVICES=0 python experiment_scripts/train_hji_air3D.py --experiment_name experiment_3 --minWith target --tMax 1.1 --velocity 0.75 --omega_max 3.0 --angle_alpha 1.2 --num_src_samples 10000 --pretrain --pretrain_iters 10000 --num_epochs 120000 --counter_end 110000

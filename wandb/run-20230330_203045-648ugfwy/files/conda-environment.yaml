@@ -1,4 +1,4 @@
-# name: siren
+name: testenv
 channels:
   - conda-forge
   - defaults
@@ -12,17 +12,17 @@ dependencies:
   - blinker=1.4=py36_0
   - bzip2=1.0.8=h516909a_2
   - c-ares=1.15.0=h7b6447c_1001
-  - ca-certificates=2020.6.20=hecda079_0
+  - ca-certificates=2023.01.10=h06a4308_0
   - cachetools=3.1.1=py_0
   - cairo=1.14.12=h8948797_3
-  - certifi=2020.6.20=py36h9f0ad1d_0
+  - certifi=2020.6.20=pyhd3eb1b0_3
   - cffi=1.14.0=py36he30daa8_1
   - chardet=3.0.4=py36_1003
   - click=7.1.2=py_0
   - cloudpickle=1.4.1=py_0
   - configargparse=1.1=py_0
   - cryptography=2.9.2=py36h1ba5d50_0
-  # - cudatoolkit=10.1.243=h6bb024c_0
+  - cudatoolkit=10.1.243=h6bb024c_0
   - cycler=0.10.0=py36_0
   - cytoolz=0.10.1=py36h7b6447c_0
   - dask-core=2.17.2=py_0
@@ -92,6 +92,7 @@ dependencies:
   - lz4-c=1.9.2=he6710b0_0
   - markdown=3.1.1=py36_0
   - markupsafe=1.1.1=py36h7b6447c_0
+  - matplotlib-base=3.2.1=py36hef1b27d_0
   - mistune=0.8.4=py36h7b6447c_0
   - mkl=2020.1=217
   - mkl-service=2.3.0=py36he904b0f_0
@@ -110,7 +111,7 @@ dependencies:
   - olefile=0.46=py36_0
   - openh264=1.8.0=hdbcaa40_1000
   - openjpeg=2.3.1=h981e76c_3
-  - openssl=1.1.1g=h516909a_0
+  - openssl=1.1.1t=h7f8727e_0
   - pandoc=2.2.3.2=0
   - pandocfilters=1.4.2=py36_1
   - pango=1.40.14=he752989_2
@@ -138,7 +139,7 @@ dependencies:
   - pyqt=5.9.2=py36h05f1152_2
   - pyrsistent=0.16.0=py36h7b6447c_0
   - pysocks=1.7.1=py36_0
-  # - python=3.6.10=h7579374_2
+  - python=3.6.10=h7579374_2
   - python-dateutil=2.8.1=py_0
   - python_abi=3.6=1_cp36m
   - pywavelets=1.1.1=py36h7b6447c_0
@@ -193,27 +194,31 @@ dependencies:
   - zlib=1.2.11=h7b6447c_3
   - zstd=1.4.4=h0b5b093_3
   - pip:
-    - astor==0.8.1
+    - appdirs==1.4.4
     - cmapy==0.6.6
-    - dataclasses==0.8
+    - docker-pycreds==0.4.0
     - gast==0.2.2
-    - google-pasta==0.2.0
+    - gitdb==4.0.9
+    - gitpython==3.1.18
     - imageio-ffmpeg==0.4.2
     - imbalanced-learn==0.6.2
-    - keras-applications==1.0.8
-    - keras-preprocessing==1.1.2
     - matplotlib==2.2.5
     - moviepy==1.0.3
     - opencv-python==3.4.9.33
     - opt-einsum==3.2.1
+    - pathtools==0.1.2
     - proglog==0.1.9
+    - psutil==5.9.4
     - pytz==2020.1
+    - sentry-sdk==1.18.0
+    - setproctitle==1.2.3
+    - smmap==5.0.0
     - tensorboard==1.15.0
     - tensorflow==1.15.0
     - tensorflow-estimator==1.15.1
-    - termcolor==1.1.0
-    # - torch==1.9.1+cu111
-    # - torchvision==0.10.1+cu111
-    - typing-extensions==4.1.1
+    - torch==1.9.1
+    - torchvision==0.10.1
+    - wandb==0.14.0
     - wrapt==1.12.1
     - youtube-dl==2020.6.6
+prefix: /home/vikashm/.conda/envs/testenv

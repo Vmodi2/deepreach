@@ -329,7 +329,7 @@ class ReachabilityDoubleIntegrator(Dataset):
 
         # self.alpha_angle = angle_alpha * math.pi
 
-        self.num_states = 2
+        self.num_states = 3 #x, y, vx
 
         self.tMax = tMax
         self.tMin = tMin
@@ -367,10 +367,12 @@ class ReachabilityDoubleIntegrator(Dataset):
             coords[-self.N_src_samples:, 0] = start_time
 
         # set up the initial value function
-        # boundary_values = torch.norm(coords[:, 1:2], dim=1, keepdim=True) - self.collisionR
-        boundary_values = -coords[:, 1].unsqueeze(-1) + self.collisionR
+        # want x^2 + y^2 - R^2 > 0
+        boundary_values = torch.norm(coords[:, 1:2], dim=1, keepdim=True) - self.collisionR
+        #boundary_values = -coords[:, 1].unsqueeze(-1) + self.collisionR
 
         # normalize the value function
+        #ask ken
         norm_to = 0.02
         mean = 0.25
         var = 0.5
